@@ -1,6 +1,6 @@
-package com.zts.life.dao;
+package com.zts.jpa.dao;
 
-import com.zts.life.entity.User;
+import com.zts.jpa.entity.User;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.Test;
