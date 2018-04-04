@@ -1,5 +1,7 @@
 package com.zts.jpa.dao;
 
+import com.zts.jpa.common.entity.Status;
+import com.zts.jpa.entity.Sex;
 import com.zts.jpa.entity.User;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -27,12 +29,13 @@ public class UserDaoTest {
 
     @Test
     public void saveTest(){
-        User user=new User(1,"zts","password");
-
-        User user1=new User();
-        user1.setUserName("zhangts1");
-        user1.setPassword("password1");
-        userDao.save(user1);
+        User user=new User();
+        user.setUserName("zhangts5");
+        user.setPassword("password5");
+        user.setSex(Sex.MALE);
+        user.setSex(Sex.FEMALE);
+        user.setStatus(Status.ACTIVE);
+        userDao.save(user);
     }
 
     @Test

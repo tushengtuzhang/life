@@ -1,5 +1,6 @@
 package com.zts.jpa.entity;
 
+import com.zts.jpa.common.entity.BaseEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -13,16 +14,15 @@ import java.io.Serializable;
 
 @Entity
 @Table
-public class User implements Serializable{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+public class User extends BaseEntity{
 
     @NotNull
+    @Column(unique = true)
     private String userName;
 
     @NotNull
     private String password;
+
+    private Sex sex=Sex.SECRET;
 
 }

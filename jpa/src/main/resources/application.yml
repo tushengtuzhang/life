@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8888
   tomcat:
     uri-encoding: utf-8
 
@@ -67,10 +67,11 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update  # 第一次简表create  后面用update
+      ddl-auto: update  # 第一次简表create  后面用update 还是 validate 呢
     properties:
       hibernate:
         show_sql: true
         format_sql: true
+    open-in-view: false
     #show-sql: true
 
